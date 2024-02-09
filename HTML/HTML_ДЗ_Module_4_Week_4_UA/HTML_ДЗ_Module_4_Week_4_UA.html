@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML_ДЗ_Module_4_Week_4_UA</title>
+    <style>
+      @keyframes sec-arrow{
+        0%{
+          transform: rotate(0deg);
+        }
+        50%{
+          transform: rotate(180deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes min-arrow{
+        0%{
+          transform: rotate(0deg);
+        }
+        50%{
+          transform: rotate(180deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes hour-arrow{
+        0%{
+          transform: rotate(0deg);
+        }
+        50%{
+          transform: rotate(180deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+      .clock-block{
+        padding-top: 1px;
+        width: 350px;
+        height: 350px;
+        background-color: lightgrey;
+        position: relative;
+      }
+      .inner-clock{
+        margin: 50px;
+        width: 250px;
+        height: 250px;
+        border-color: cadetblue;
+        border-style: solid;
+        border-width: 3px;
+        position: relative;
+        border-radius: 50%;
+      }
+      .point{
+        width: 7px;
+        height: 7px;
+        background-color: cadetblue;
+        top: -73%;
+        left: 49%;
+        position: relative;
+        border-radius: 50%;
+      }
+      .sec-arrow{
+        width: 0.1px;
+        height: 45%;
+        background-color: cadetblue;
+        border: 0.1px solid cadetblue;
+        position: relative;
+        top: 5%;
+        left: 50%;
+        transform-origin: 50% 100%;
+        animation: sec-arrow 60s linear 0s infinite;
+      }
+      .min-arrow{
+        width: 1px;
+        height: 40%;
+        background-color: cadetblue;
+        border: 0.1px solid cadetblue;
+        position: relative;
+        top: -36%;
+        left: 50%;
+        transform-origin: 50% 100%;
+        animation: min-arrow 3600s linear 0s infinite;
+      }
+      .hour-arrow{
+        width: 3px;
+        height: 35%;
+        background-color: cadetblue;
+        border: 0.1px solid cadetblue;
+        position: relative;
+        top: -71%;
+        left: 50%;
+        transform-origin: 50% 100%;
+        animation: hour-arrow 86400s linear 0s infinite;
+      }
+      .Hello{
+        margin-top: 50px;
+        padding-top: 50px;
+        width: 400px;
+        height: 100px;
+        background-color: lightgray;
+        position: relative;
+        text-align: center;
+      }
+      .block{
+        position: relative;
+        width: 300px;
+        height: 100px;
+        padding: 50;
+        top: -90%;
+        left: 13%;
+      }
+      a{
+        width: 140px;
+        height: 100px;
+        text-decoration: none;
+        display: inline-block;
+        background-color: sienna;
+        font-size: 0px;
+        border: 4px;
+        border-style: groove;
+        border-color: saddlebrown;
+        transition: all 2s ease-in-out 0s;
+      }
+      a:hover{
+        transform: translateX(20px) rotateY(60deg);
+        /* transform: skew(20deg) translate(20px, 20px) rotate(20deg) scale(1.2); */
+      }
+      .HW{
+        margin-top: 50px;
+        width: 400px;
+        height: 300px;
+        background-color: lightgray;
+        position: relative;
+      }
+      .lineHW{
+        text-align: center;
+        width: 400px;
+        height: 100px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: contain;
+      }
+      .textHW{
+        width: 200px;
+        height: 100px;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .picHWright{
+        position: relative;
+        width: 200px;
+        height: 100px;
+        float: right;
+        contain: content;
+      }
+      .picHWleft{
+        position: relative;
+        width: 200px;
+        height: 100px;
+        float: left;
+        contain: content;
+      }
+      .lineHW :hover{
+        opacity: 0.5;
+        color: black;
+        transform: scale(1.1, 1.1);
+        transition: all 0.3s ease-in-out 0s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock-block">
+      <div class="inner-clock">
+        <div class="sec-arrow">
+        </div>
+        <div class="min-arrow">
+        </div>
+        <div class="hour-arrow">
+        </div>
+        <div class="point">
+        </div>
+      </div>
+    </div>
+    <div class="Hello">
+      <p>HELLO</p>
+      <div class="block">
+        <a href="#">BLOCK1</a>
+        <a href="#">BLOCK2</a>
+      </div>
+    </div>
+    <div class="HW">
+      <div class="lineHW">
+        <div class="textHW">
+          HELLO WORLD 
+        </div>
+        <div class="picHWright">
+          <img src="./Images/BEST.jpg" alt="BEST.jpg" height="100px" width="200px">
+        </div>
+      </div>
+      <div class="lineHW">
+        <div class="textHW">
+          HELLO WORLD 
+        </div>
+        <div class="picHWleft">
+          <img src="./Images/BEST.jpg" alt="BEST.jpg" height="100px" width="200px">
+        </div>
+      </div>
+      <div class="lineHW">
+        <div class="textHW">
+          HELLO WORLD 
+        </div>
+        <div class="picHWright">
+          <img src="./Images/BEST.jpg" alt="BEST.jpg" height="100px" width="200px">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

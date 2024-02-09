@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAME</title>
+  </head>
+  <style>
+    header{
+      background-color: black;
+      color: white;
+      margin: 0px;
+      padding: 20px;
+
+      position: fixed;
+      float: left;
+      width: 10em;
+      height: auto;
+      top: 0%;
+      right: auto;
+      bottom: 100px;
+      left: 0;
+    }
+    .ParentContainer{
+      width: fit-content;
+      background-color: lightgray;
+      margin: auto;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+      position: fixed;
+      width: auto;
+      height: auto;
+      top: 0%;
+      right: 0;
+      bottom: 100px;
+      left: 12em;
+    }
+    .LOGO{
+      padding: 30px;
+      margin: 20px;
+      display: contents;
+    } 
+    .TRAFFIC{
+      display: inline-block;
+      text-align: left;
+      background-color: aliceblue;
+      max-width: 450px;
+      padding: 30px;
+      margin: 20px;
+    }    
+    .LOADS{
+      display: inline-block;
+      text-align: left;
+      background-color: aliceblue;
+      max-width: 450px;
+      padding: 30px;
+      margin: 20px;
+    }    
+    .ACTIVITY{
+      display: block;
+      background-color: aliceblue;
+      max-width: 1000px;
+      padding: 30px;
+      margin: 20px;
+    }
+    a{
+      text-decoration: none;
+      display: block;
+      font-size: 30;
+      font-weight: bold;
+      padding: 12px 16px;
+      background-color: black;
+      text-align: center;
+      color: white;
+    }
+    img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: auto;
+      padding: 40px;
+    }
+    #LOGO{
+      display: block;
+      width: 50%;
+      height: auto;
+      padding: 30px 20px;
+      position: relative;
+    }
+    tr:first-child{
+      font-weight: bold;
+    }
+    td:first-child{
+      text-align: center;
+      padding: 0px 15px;
+    }
+    td:nth-child(2){
+      padding-right: 60px;
+    }
+    td{
+      padding: 10px;
+      border-bottom: 1px solid lightgrey;
+    }
+  </style>
+  <body>
+    <div class="ParentContainer">
+      <header>
+        <div class="LOGO">
+          <img id="LOGO" src="./images/logo.png" alt="LOGO">
+          <a href="#">DASHBOARD</a>
+          <a href="#">USERS</a>
+          <a href="#">FILE MANAGER</a>
+          <a href="#">POSTS</a>
+          <a href="#">EVENTS</a>
+        </div>
+      </header>
+      <h1>Dashboard - May 25, 2019</h1>
+      <div class="TRAFFIC">
+        <h2>TRAFFIC</h2>
+        <img src="./images/chart1.png" alt="TRAFFIC">
+      </div>
+      <div class="LOADS">
+        <h2>LOADS</h2>
+        <img src="./images/chart2.png" alt="LOADS">
+      </div>
+      <div class="ACTIVITY">
+        <h2>RESENT ACTIVITY</h2>
+        <table>
+          <tr>
+            <td>#</td><td>Title</td><td>Author</td><td>Date</td>
+          </tr>
+          <tr>
+            <td>1</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td><td>Phoebe Britton</td><td>25/05/19</td>
+          </tr>
+          <tr>
+            <td>2</td><td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, explicabo!</td><td>Rosina Clay</td><td>25/05/19</td>
+          </tr>
+          <tr>
+            <td>3</td><td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</td><td>Ayush Horn</td><td>24/05/19</td>
+          </tr>
+          <tr>
+            <td>4</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Jillian Carven</td><td>25305/19</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

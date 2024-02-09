@@ -1,0 +1,8 @@
+Відповідь: userName=input("Enter your name: ")
+print("Hello,", userName+".")
+profit=float(input("Please, enter your monthly salary ($ per month): "))
+loanpayment=float(input("enter your monthly payment for the bank loan ($ per month): "))
+utilitiesarrears=float(input("enter your arrears for communal services ($ per month): "))
+expenses=(loanpayment+utilitiesarrears)
+balance=profit-expenses
+print(userName+", your monthly expenses are", expenses, "$", "and your total balance after these payments is", balance, "$")

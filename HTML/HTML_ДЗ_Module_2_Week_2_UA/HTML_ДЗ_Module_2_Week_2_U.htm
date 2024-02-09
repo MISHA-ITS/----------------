@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Alphabet</title>
+    <style>
+        .Fruit
+        {
+            margin: 50px;
+            padding-left: 50px;
+            padding-right: 750px;
+        }
+        ol
+        {
+            background-color: lightpink;
+            box-shadow: 5px 5px 5px 5px black;
+            padding: 15px;
+        }
+        ol li
+        {
+            color: whitesmoke;
+            font-weight: bold;
+            background-color: lightcoral;
+            padding: 3px;
+            list-style-position: inside;
+        }
+        .ToDoList
+        {
+            margin: 50px;
+            padding-left: 50px;
+            padding-right: 750px;
+        }
+        ul
+        {
+            background-color: lightgray;
+            list-style-image: url(./Images/unchecked_16.png);
+            font-weight: bolder;
+            box-shadow: 5px 5px 5px 5px black;
+            padding: 15px;
+            border-bottom-style: 2px solid rgb(19, 4, 1);
+        }
+        ul li
+        {
+            padding: 5px;
+            list-style-position: inside;
+        }
+        ul li::after
+        {
+            content: url(./Images/arrow_16.png);
+        }
+        #done
+        {
+            background-color: rgb(168, 168, 168);
+            text-decoration: line-through;
+            list-style-image: url(./Images/checked_16.png);
+        }
+        ul :nth-child(odd)
+        {
+            background-color: rgb(179, 169, 238);
+        }
+        ul :nth-child(even)
+        {
+            background-color: rgb(162, 146, 255);
+        }
+        #Alphabet
+        {
+            color: red;
+            margin-left: 150px;
+            font-family: 'Lucida Sans';
+            text-decoration-line: underline;
+            text-decoration-color: red;
+        }
+        #List
+        {
+            color: lightgray;
+            margin-left: 150px;
+            font-family: 'Lucida Sans';
+            text-decoration-line: underline;
+            text-decoration-color: lightgray;
+        }
+        #tæɡ
+        {
+            text-decoration-line: underline;
+        }
+        .TAG
+        {
+            margin-left: 100px;
+            margin-right: 350px;
+            padding: 50px;
+            background-color: lightgray;
+            box-shadow: 5px 5px 5px 5px black;
+        }
+        .TAG1
+        {
+            background-color: lightgray;
+            color: black;
+        }
+        dl dt
+        {
+            font-weight: lighter;
+        }
+        dd ol
+        {
+            background-color: lightgray;
+            color: black;
+            box-shadow: 5px 5px 5px 5px  lightgray;
+        }
+        .par
+        {
+            color: black;
+            font-weight: lighter;
+            margin-top: -3px;
+            margin-bottom: -3px;
+            margin-left: 30px;
+        }
+        .qwerty
+        {
+            font-size: medium;
+            color: dimgray;
+            font-weight: lighter;
+            margin-top: -3px;
+            margin-bottom: -3px;
+            margin-left: 30px;
+        }
+        body
+        {
+            background-image: url("./Images/background_crop_n.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        h1
+        {
+            color: aliceblue;
+            background-color: blue;
+            font-weight: bolder;
+            text-align: center;
+            text-size-adjust: 300px;
+            border:2px solid whitesmoke;
+        }
+        h2
+        {
+            font-weight: bolder;
+            color: crimson;
+        }
+        h3
+        {
+            font-weight: bolder;
+        }
+        hr
+        {
+            color: blue;
+            height: 2px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>HTML ДЗ Module 2 Week 2 UA</h1>
+    <h2><a href="#Alphabet">Завдання 1</a></h2>
+    <h2><a href="#List">Завдання 2</a></h2>
+    <h2><a href="#tæɡ">Завдання 3</a></h2>
+    <hr>
+    <div class="Fruit">
+        <h3><p id="Alphabet">Fruit Alphabet</p></h3>
+        <ol style="list-style-type: upper-latin;">
+            <li><span style="background-color: red;">Apple</span></li>
+            <li><span style="background-color: red;">Banana</span></li>
+            <li><span style="background-color: red;">Cherry</span></li>
+            <li><span style="background-color: red;">Durian</span></li>
+            <li><span style="background-color: red;">Elderberry</span></li>
+            <li><span style="background-color: red;">Farkleberry</span></li>
+            <li><span style="background-color: red;">Grapefruit </span></li>
+            <li><span style="background-color: red;">Hackberry</span></li>
+            <li><span style="background-color: red;">Imbe</span></li>
+            <li><span style="background-color: red;">Jackfruit</span></li>
+            <li><span style="background-color: red;">Kiwi</span></li>
+            <li><span style="background-color: red;">Lime</span></li>
+            <li><span style="background-color: red;">Mango</span></li>
+            <li><span style="background-color: red;">Navel Orange</span></li>
+            <li><span style="background-color: red;">Orange</span></li>
+            <li><span style="background-color: red;">Papaya</span></li>
+            <li><span style="background-color: red;">Quararibea cordata (Chupa Chupa)</span></li>
+            <li><span style="background-color: red;">Raspberry</span></li>
+            <li><span style="background-color: red;">Strawberry</span></li>
+            <li><span style="background-color: red;">Tart Cherry</span></li>
+            <li><span style="background-color: red;">Uniq Fruit</span></li>
+            <li><span style="background-color: red;">Vanilla Bean</span></li>
+            <li><span style="background-color: red;">Watermelon</span></li>
+            <li><span style="background-color: red;">Ximenia caffra fruit</span></li>
+            <li><span style="background-color: red;">Yunnan Hackberry</span></li>
+            <li><span style="background-color: red;">Zinfandel Grapes</span></li>
+        </span></ol>
+    </div>   
+    <div class="ToDoList">
+        <h3><p id="List">My To Do List</p></h3>
+        <ul>
+            <li id="done">WAKE UP
+            </li><li>TAKE A BATH</li>
+            <li>EAT</li>    
+            <li id="done">INTERNET</li>
+            <li>EAT</li>
+            <li>INTERNET</li>     
+            <li>EAT</li>
+            <li>INTERNET</li> 
+            <li>EAT</li>
+            <li>INTERNET</li> 
+            <li>SLEEP</li>
+        </ul>
+    </div>
+    <div class="TAG">
+        <h3><p id="tæɡ">TAG</p></h3>
+        <h4>[tæɡ]</h4>
+        <dl>
+            <dt><i>noun</i></dt>
+            <dd>
+                <ol>
+                    <li class="TAG1">
+                        <p class="par">a label attached to someone or something for the purpose of identification or to give other information.</p>
+                        <p class="qwerty">"he gave his pet a collar with a metal name tag"</p>
+                        <p class="par">synonyms: <span style="color: darkslateblue;">label, ticket, badge, mark, marker, tab, tally, sticker, docket, stub, chit, chitt, counterfoi, flag, stamp </span></p>
+                        <p class="qwerty">"a price tag"</p>
+                    </li>
+                    <li class="TAG1">
+                        <p class="par">a small piece or part that is attached to a main body.</p>
+                    </li>
+                </ol>
+            </dd>
+            <dt><i>verb</i></dt>
+            <dd>
+                <ol>
+                    <li class="TAG1">
+                        <p class="par">attach a label to.</p>
+                        <p class="qwerty">"mothers suspected that their babies had been wrongly tagged during an alarm at the hospital"</p>
+                        <p class="par">synonyms: <span style="color:darkslateblue;">label, attach tags to, put a label on, mark, ticket, earmark, identify, docket, flag, indicate</span></p>
+                        <p class="qwerty">"the bottles were tagged with colour-coded labels"</p>
+                    </li>
+                    <li class="TAG1">
+                        <p class="par">add to something, especially as an afterthought or with no real connection.</p>
+                        <p class="qwerty">"she meant to tag her question on at the end of her remarks"</p>
+                        <p class="par">synonyms: <span style="color: darkslateblue;">add, tack, join, attach, append, affix, annex</span></p>
+                        <p class="qwerty">"their heads were so large that the rest of their bodies seemed tagged on as an afterthought"</p>
+                    </li>
+                </ol>
+            </dd>
+        </dl>
+    </div>
+  
+</body></html>

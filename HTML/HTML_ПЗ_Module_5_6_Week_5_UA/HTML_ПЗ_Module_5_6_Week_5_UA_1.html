@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML_ПЗ_Module_5_6_Week_5_UA</title>
+  </head>
+  <style>
+    div{
+      background-color: rgb(241, 241, 241);
+      margin: 20px;
+      padding: 20px;
+      width: fit-content;
+    }
+    caption{
+      margin-bottom: 10px;
+      font-size: 10px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    table{
+      border: 0px;
+      border-radius: 10px;
+      border-collapse: collapse;
+      /* border-spacing: 0px; */
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 7px;
+    }
+    th{
+      color: white;
+      background-color: rgb(0, 0, 92);
+      padding: 10px 15px;
+    }
+    td{
+      height: 20px;
+      font-weight: 400;
+      text-align: center;
+      vertical-align: middle;
+    }
+    td:nth-child(odd){
+      background-color: rgba(216, 213, 213, 0.6);
+    }
+    tr:nth-child(odd){
+      background-color: rgba(216, 213, 213, 0.6);
+    }
+    td:first-child{
+      text-align: left;
+      padding: 0px 15px;
+    }
+    .price{
+      font-size: 15px;
+    }
+    .col1{
+      opacity: 40%;
+    }
+    .col2{
+      opacity: 55%;
+    }
+    .col3{
+      opacity: 70%;
+    }
+    .col4{
+      opacity: 85%;
+    }
+    .footer{
+      height: 30px;
+    }
+    a{
+      text-decoration: none;
+      display: inline-block;
+      width: 40px;
+      border: 1px solid gray;
+      padding: 3px 5px;
+      color: black;
+      background-color: lightgrey;
+    }
+    a:hover{
+      background-color: rgb(0, 0, 92);
+      color: white;
+      border: 2px solid white;
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <div>
+      <table>
+        <caption>Завдання 1</caption>
+        <thead>
+          <tr>
+            <th class="col1">Choose your plan</th>
+            <th class="col2">starter<br><br><span class="price">$10</span><br>per month</th>
+            <th class="col3">econom<br><br><span class="price">$30</span><br>per month</th>
+            <th class="col4">standard<br><br><span class="price">$59</span><br>per month</th>
+            <th>professional<br><br><span class="price">$99</span><br>per month</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Amount of space</td>
+            <td>20GB</td>
+            <td>40GB</td>
+            <td>110GB</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <td>Bandwidth per month</td>
+            <td>120GB</td>
+            <td>240GB</td>
+            <td>610GB</td>
+            <td>1300GB</td>
+          </tr>
+          <tr>
+            <td>Email accounts</td>
+            <td>1</td>
+            <td>15</td>
+            <td>60</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <td>MySQL databases</td>
+            <td>1</td>
+            <td>15</td>
+            <td>60</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <td>25h support</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Support tickets per month</td>
+            <td>2</td>
+            <td>6</td>
+            <td>14</td>
+            <td>20</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="footer"></td>
+            <td><a href="START">START</a></td>
+            <td><a href="START">START</a></td>
+            <td><a href="START">START</a></td>
+            <td><a href="START">START</a></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>

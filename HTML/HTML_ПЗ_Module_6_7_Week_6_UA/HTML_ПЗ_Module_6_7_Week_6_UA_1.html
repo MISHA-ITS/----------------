@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAME</title>
+  </head>
+  <style>
+    .ParentContainer{
+      box-shadow: 1px 1px 7px 5px lightgray;
+      margin: 20px;
+      padding: 20px;
+      max-width: max-content;
+    }
+    .ImageContainer{
+      float: left;
+      margin: 10px;
+      width: 30%;
+      border: 2px solid rgb(59, 58, 58);
+    }
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .Info{
+      display: inline-block;
+      margin: 10px;
+      min-width: 500px;
+    }
+    .Upload{
+      display: flex;
+      border: 2px solid rgb(59, 58, 58);
+      width:100%;
+    }
+    .UploadPersents{
+      float: left;
+      background-color: cornflowerblue;
+      padding-left: 20px;
+      width:40%;
+    }
+    .UploadTime{
+      float: left;
+      text-align: right;
+      padding-right: 20px;
+      width: 60%;
+    }
+    .VideoTitle{
+      float: left;
+    }
+    .Bottom{
+      margin: 10px;
+      float: right;
+      color: white;
+      background-color: darkblue;
+      text-align: center;
+      height: 50px;
+      width: 10%;
+      max-width: 600px;
+    }
+  </style>
+  <body>
+    <div class="ParentContainer">
+      <div class="ImageContainer">
+        <img src="./images/loading.png" alt="">
+      </div>
+      <div class="Info">
+        <div class="Upload">
+          <div class="UploadPersents">
+            <p>UPLOADING 40%</p>
+          </div>
+          <div class="UploadTime">
+            <p>About 23 minutes remaining</p>
+          </div>
+        </div>
+        <div class="VideoTitle">
+          <h3>Title of video</h3>
+          <p>*Your video is still uploading.Please keep this page open until it's done</p>
+        </div>
+      </div>
+      <div class="Bottom">
+        <p>DONE</p>
+      </div>
+    </div>
+  </body>
+</html>
