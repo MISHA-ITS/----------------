@@ -6,63 +6,76 @@
     <title>NAME</title>
   </head>
   <style>
-    header{
-      background-color: black;
-      color: white;
-      margin: 0px;
-      padding: 20px;
-
-      position: fixed;
-      float: left;
-      width: 10em;
-      height: auto;
-      top: 0%;
-      right: auto;
-      bottom: 100px;
-      left: 0;
+    @media screen and (max-width: 600px)
+    {
+      .ParentContainer{
+        flex-direction: column;
+      }
+      .ParentContainer>aside{
+        flex-basis: 10vh;
+        width: 100%;
+      }
+      section{
+        flex-direction: column;
+        width: auto;
+      }
+    }
+    *{
+      padding: 0;
+      margin: 0;
     }
     .ParentContainer{
-      width: fit-content;
-      background-color: lightgray;
+      width: 100vw;
+      min-width: 320px;
+      max-width: 1400px;
       margin: auto;
-      padding: 20px;
+      min-height: 100vh;
+      max-height: auto;
+      display: flex;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-      position: fixed;
-      width: auto;
+    }
+    aside{
+      background-color: black;
+      color: white;
+      padding: 20px;
+      width: 25em;
       height: auto;
-      top: 0%;
-      right: 0;
-      bottom: 100px;
-      left: 12em;
+    }
+    main{
+      width: 100vw;
+      margin: auto;
+      padding: 30px;
+      min-height: 100vh;
+      max-height: auto;
+      flex: 11 auto;
+      display: flex;
+      flex-direction: column;
+      background-color: darkgrey;
     }
     .LOGO{
       padding: 30px;
       margin: 20px;
       display: contents;
-    } 
-    .TRAFFIC{
-      display: inline-block;
+    }
+    main>section{
+      flex-basis: 20vh 100vw;
+      display: flex;
+    }
+    main>section>div{
+      flex-basis: 50vw;
       text-align: left;
       background-color: aliceblue;
       max-width: 450px;
       padding: 30px;
       margin: 20px;
-    }    
-    .LOADS{
-      display: inline-block;
-      text-align: left;
-      background-color: aliceblue;
-      max-width: 450px;
-      padding: 30px;
-      margin: 20px;
-    }    
+    }  
     .ACTIVITY{
       display: block;
       background-color: aliceblue;
       max-width: 1000px;
       padding: 30px;
       margin: 20px;
+      flex-basis: 40vh 100vw;
     }
     a{
       text-decoration: none;
@@ -71,7 +84,7 @@
       font-weight: bold;
       padding: 12px 16px;
       background-color: black;
-      text-align: center;
+      text-align: left;
       color: white;
     }
     img{
@@ -81,13 +94,13 @@
       width: 80%;
       height: auto;
       padding: 40px;
+      margin: auto;
     }
     #LOGO{
-      display: block;
       width: 50%;
       height: auto;
+      margin: auto;
       padding: 30px 20px;
-      position: relative;
     }
     tr:first-child{
       font-weight: bold;
@@ -105,8 +118,10 @@
     }
   </style>
   <body>
+
     <div class="ParentContainer">
-      <header>
+
+      <aside>
         <div class="LOGO">
           <img id="LOGO" src="./images/logo.png" alt="LOGO">
           <a href="#">DASHBOARD</a>
@@ -115,36 +130,47 @@
           <a href="#">POSTS</a>
           <a href="#">EVENTS</a>
         </div>
-      </header>
-      <h1>Dashboard - May 25, 2019</h1>
-      <div class="TRAFFIC">
-        <h2>TRAFFIC</h2>
-        <img src="./images/chart1.png" alt="TRAFFIC">
-      </div>
-      <div class="LOADS">
-        <h2>LOADS</h2>
-        <img src="./images/chart2.png" alt="LOADS">
-      </div>
-      <div class="ACTIVITY">
-        <h2>RESENT ACTIVITY</h2>
-        <table>
-          <tr>
-            <td>#</td><td>Title</td><td>Author</td><td>Date</td>
-          </tr>
-          <tr>
-            <td>1</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td><td>Phoebe Britton</td><td>25/05/19</td>
-          </tr>
-          <tr>
-            <td>2</td><td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, explicabo!</td><td>Rosina Clay</td><td>25/05/19</td>
-          </tr>
-          <tr>
-            <td>3</td><td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</td><td>Ayush Horn</td><td>24/05/19</td>
-          </tr>
-          <tr>
-            <td>4</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Jillian Carven</td><td>25305/19</td>
-          </tr>
-        </table>
-      </div>
+      </aside>
+
+      <main>
+
+        <h1>Dashboard - May 25, 2019</h1>
+
+        <section>
+          <div>
+            <h2>TRAFFIC</h2>
+            <img src="./images/chart1.png" alt="TRAFFIC">
+          </div>
+          <div>
+            <h2>LOADS</h2>
+            <img src="./images/chart2.png" alt="LOADS">
+          </div>
+        </section>
+
+        <div class="ACTIVITY">
+          <h2>RESENT ACTIVITY</h2>
+          <table>
+            <tr>
+              <td>#</td><td>Title</td><td>Author</td><td>Date</td>
+            </tr>
+            <tr>
+              <td>1</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td><td>Phoebe Britton</td><td>25/05/19</td>
+            </tr>
+            <tr>
+              <td>2</td><td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, explicabo!</td><td>Rosina Clay</td><td>25/05/19</td>
+            </tr>
+            <tr>
+              <td>3</td><td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</td><td>Ayush Horn</td><td>24/05/19</td>
+            </tr>
+            <tr>
+              <td>4</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td><td>Jillian Carven</td><td>25305/19</td>
+            </tr>
+          </table>
+        </div>
+
+      </main>
+
     </div>
+
   </body>
 </html>
