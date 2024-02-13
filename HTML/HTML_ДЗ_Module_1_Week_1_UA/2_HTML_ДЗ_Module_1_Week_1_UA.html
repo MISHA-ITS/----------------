@@ -4,30 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card gsme Ex.2</title>
-    <style>
-        .container
-        {
-            background-color: rgb(228, 220, 220);
-        }
-        #mst
-        {
-            background-color: rgb(172, 170, 170);
-        }
-        div
-        {
-            list-style-type: square;
-            padding-right: 750px;
-            padding-left: 50px;
-        }
-    </style>
   </head>
+  <style>
+    .container{
+      background-color: rgb(238, 235, 235);
+      margin: 20px;
+      padding: 20px;
+      width: 300px;
+    }
+    h4{
+      font-size: 10px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: lighter;
+    }
+    a{
+      text-decoration: none;
+      background-color: lightgrey;
+      margin: 2px;
+      padding: 5px;
+      color: black;
+      font-size: 20px;
+      font-family: sans-serif;
+    }
+    .red{
+      color: darkred
+    }
+  </style>
   <body>
     <div class="container">
+      <div>
         <h4>Player 1</h4>
-        <p id="mst">2 9  6  A  Q  J  </p>
+        <a href="2 &clubs;">2 &clubs;</a><a class="red" href="9 &hearts;">9 &hearts;</a><a class="red" href="6 &hearts;">6 &hearts;</a><a class="red" href="A &diams;">A &diams;</a><a href="Q &spades;">Q &spades;</a><a href="J &clubs;">J &clubs;</a>
+      </div>
+      <div>
         <h4>Player 2</h4>
-        <p id="mst">3  A  8  K  6  3  </p>
-
+        <a class="red" href="3 &hearts;">3 &hearts;</a><a href="A &clubs;">A &clubs;</a><a href="8 &clubs;">8 &clubs;</a><a class="red" href="K &diams;">K &diams;</a><a href="6 &spades;">6 &spades;</a><a class="red" href="3 &hearts;">3 &hearts;</a>
+      </div>
     </div>
   </body>
 </html>
