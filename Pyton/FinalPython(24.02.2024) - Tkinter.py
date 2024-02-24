@@ -13,17 +13,25 @@ def load_contacts(filename="contacts.txt"):
     return contacts
 
 def save_contacts(contacts, filename="contacts.txt"):
-    sorted_contacts = dict(sorted(contacts.items(), key=lambda x: x[0]))
     with open(filename, 'w') as file:
-        for name, phone in sorted_contacts.items():
+        for name, phone in contacts.items():
             file.write(f"{name}: {phone}\n")
 
-def show_contacts(contacts):
-    if not contacts:
-        messagebox.showinfo("Contacts", "No contacts available.")
-    else:
-        contact_list = "\n".join([f"{name}: \t{phone}" for name, phone in contacts.items()])
-        messagebox.showinfo("Contacts", f"Contacts:\n{contact_list}")
+def find_contact(contacts):
+    search_term = simpledialog.askstring("Find Contact", "Enter name or phone to search:")
+    if search_term is not None:
+        search_term = search_term.lower()  # Convert to lowercase for case-insensitive search
+        found_contacts = []
+
+        for name, phone in contacts.items():
+            if search_term in name.lower() or search_term in phone.lower():
+                found_contacts.append(f"{name}: {phone}")
+
+        if found_contacts:
+            result = "\n".join(found_contacts)
+            messagebox.showinfo("Contact Found", f"Found contact:\n{result}")
+        else:
+            messagebox.showinfo("Contact Not Found", f"No contacts found for '{search_term}'.")
 
 def add_contact(contacts, filename="contacts.txt"):
     name = simpledialog.askstring("Add Contact", "Enter contact name:")
@@ -76,28 +84,37 @@ def remove_contact(contacts, filename="contacts.txt"):
     else:
         messagebox.showwarning("Error", f"Contact '{name}' not found. Cannot remove a non-existent contact.")
 
-def menu():
-    filename = "contacts.txt"
-    contacts = load_contacts(filename)
+def create_menu_window():
+    menu_window = tk.Tk()
+    menu_window.title("Contact Manager")
+    menu_window.geometry("150x180+500+200")
+    
+    # window_width = 300
+    # window_height = 250
 
-    while True:
-        choice = simpledialog.askstring("Menu", "Options:\n1. Show contacts\n2. Add contact\n3. Edit contact\n4. Remove contact")
+    # x_position = 1000
+    # y_position = 1000
 
-        if choice == '1':
-            show_contacts(contacts)
-        elif choice == '2':
-            add_contact(contacts, filename)
-        elif choice == '3':
-            edit_contact(contacts, filename)
-        elif choice == '4':
-            remove_contact(contacts, filename)
-        elif choice is None: # Check if the user clicked Cancel
-            messagebox.showinfo("Exit", "Exiting the program. Goodbye!")
-            break
-        else:
-            messagebox.showwarning("Error", "Invalid choice. Please enter a number between 1 and 4.")
+    button_width = 20  # Set the width for all buttons
+
+    find_button = tk.Button(menu_window, text="Find Contact", width=button_width, command=lambda: find_contact(contacts))
+    find_button.pack(pady=5)
+
+    add_button = tk.Button(menu_window, text="Add Contact", width=button_width, command=lambda: add_contact(contacts))
+    add_button.pack(pady=5)
+
+    edit_button = tk.Button(menu_window, text="Edit Contact", width=button_width, command=lambda: edit_contact(contacts))
+    edit_button.pack(pady=5)
+
+    remove_button = tk.Button(menu_window, text="Remove Contact", width=button_width, command=lambda: remove_contact(contacts))
+    remove_button.pack(pady=5)
+
+    exit_button = tk.Button(menu_window, text="Exit", width=button_width, command=menu_window.destroy)
+    exit_button.pack(pady=5)
+
+    return menu_window
 
 if __name__ == "__main__":
-    root = tk.Tk()
-    root.withdraw()  # Hide the main window
-    menu()
+    contacts = load_contacts()
+    menu_window = create_menu_window()
+    menu_window.mainloop()

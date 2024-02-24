@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F I N A L HTML</title>
+  </head>
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box;}
+
+    body {
+      margin: 0;
+      background-color: rgba(236, 171, 124, 0.411);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 500;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    [class*="column-"] {
+      padding-left: 15px;
+      padding-right: 5px;
+      min-width: 1px;
+      max-width: 100%;
+      }
+
+    .column-2 { flex: 0 0 50%; }
+
+    .column-3 { flex: 0 0 33.33%; }
+
+    a {color: white;}
+
+    .mb {margin-bottom: 20px;}
+
+    .text-center {text-align: center;}
+
+    .heading {
+      font-size: 3rem;
+      line-height: 1.5;
+      text-align: center;
+      margin: 3.5rem 0;
+      color: black;
+    }
+
+    .justify-content-between { justify-content: space-between; }
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .img-border {
+      border: 4px solid rgba(102, 29, 29, 0.87);
+      transition: 0.8s;
+    }
+
+    .tab:hover .img-border, .img-border:hover {
+      border-color: white;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.38);
+    }
+
+    .btn {
+      display: inline-block;
+      height: 38px;
+      padding: 0 30px;
+      color: white;
+      text-align: center;
+      line-height: 38px;
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: saddlebrown;
+      cursor: pointer;
+      transition: .5s;
+    }
+
+    .btn:hover { background: rgb(66, 38, 18); color: white; text-decoration: none; }
+
+    label {display: inline-block; margin-bottom: 10px;}
+
+    input, textarea {
+      height: 28px;
+      width: 100%;
+      padding: 6px 10px;
+      background-color: white;
+      border: none;
+      box-shadow: none;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    input:focus, textarea:focus { box-shadow: 0 0 12px rgba(15, 19, 132, 0.38); }
+
+    textarea { min-height: 115px; }
+
+    header {
+      height: 500px;
+      background-color: saddlebrown;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes moveLeft {
+      0% { opacity: 0; transform: translateY(-100%); }
+    }
+    @keyframes moveRight {
+      0% { opacity: 0; transform: translateY(100%); }
+    } 
+  
+    header {
+      height: 500px;
+      background-image: url('./Images/TOP.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: saddlebrown;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      -ms-align-items: center;
+      align-items: center;
+    }
+  
+    h1 {
+      font-size: 3em;
+      animation: moveLeft .5s ease-out .2s backwards;
+    }
+  
+    header h2 {
+      font-size: 2em;
+      animation: moveRight .5s ease-out .9s backwards;
+    }
+
+    .dishes-item {
+      margin: .5rem 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      position: relative;
+      overflow: hidden;
+      border: 4px solid transparent;
+      transition: 400ms ease-out;
+    }
+  
+    .dishes-item img {
+      display: block;
+      border: 4px solid rgba(102, 29, 29, 0.87);
+      transition: 400ms ease-out;
+    }
+  
+    .dishes-item:hover {
+      border-color: white;
+      box-shadow: 0 0 24px rgba(0, 0, 0, 0.38);
+    }
+  
+    .dishes-item:hover img { transform: scale(1.15); }
+  
+    .dishes-item::after {
+      content: attr(data-descr);
+      display: block;
+      position: absolute;
+      left: 0;
+      top:100%;
+      width: 100%;
+      padding: 20% 15px;
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      font-size: 1.5rem;
+      transition: 500ms ease-out 200ms;
+      pointer-events: none;
+    }
+
+    .dishes-item:hover::after{ top: 25%; }
+
+    .main-nav {
+      position: fixed;
+      top: 0px;
+      z-index: 1;
+      width: 100%;
+      padding: 10px;
+      background: rgba(102, 29, 29, 0.87);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.38);
+      min-height: 65px;
+    }
+  
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+  
+    nav ul li {
+      margin-left: 35px;
+      line-height: 1.5;
+      letter-spacing: 1px;
+    }
+  
+    nav ul a {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+      transition: .5s;
+    }
+  
+    nav ul a:hover { 
+      color: rgb(255, 214, 173); 
+      border-bottom-color: bisque;
+    }
+  
+    .mobile-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 20px;
+      position: absolute;
+      right: 22px;
+      top: 20px;
+      width: 30px;
+    }
+
+  </style>
+  <body>
+    <div class="main-nav">
+      <div class="container">
+          <nav>
+              <ul>
+                  <li><a class="menu-item" href="#header">Головна</a></li>
+                  <li><a class="menu-item" href="#about">Про нас</a></li>
+                  <li><a class="menu-item" href="#dishes">Страви</a></li>
+                  <li><a class="menu-item" href="#contacts">Замовити</a></li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+    <header id="header">
+      <h1>CІМЕЙНИЙ РЕСТОРАН</h1>
+      <h2>КАВКАЗЬКОЇ КУХНІ</h2>
+    </header>
+    <section id="about">
+      <div class="container">
+          <h2 class="heading">Про нас</h2>
+          <p>KinZa - сімейний ресторан кавказької кухні в м. Рівне. Підходить для сніданку, обіду та вечері, для відпочинку з сім'єю чи друзями, та для романтичного побачення.</p>
+          <div class="row">
+              <div class="column-2">
+                  <h3>Зручно</h3>
+                  <p>Облаштована дитяча зона та дитячі стільці.
+                    Банкетний зал для святкувань великою та маленькою компанією.
+                    Великий асортимент кавказьких вин, коньяків, бренді та чачі.
+                    Мангал меню, хачапурі, хінкалі, вегетеріанські страви, салати, риба, перші страви.
+                    Завжди в наявності Мацоні та Айран.</p>
+                  <h3>Затишно</h3>
+                  <p>Допомагаючи гостям міста краще зрозуміти нашу культуру і традиції. Ми завжди раді поділитись з Вами теплом та затишком.</p>
+                  <h3>Замовляй доставку</h3>
+                  <p>Телефон для замовлення та бронювання: 099 182 8128 <br> Адреса закладу: м. Рівне, Кулика і Гудачека, 60
+                  </p>
+              </div>
+              <div class="column-2">
+                  <img src="./Images/Hall.jpg" class="img-fluid img-border" alt="About us">
+              </div>
+          </div>
+      </div>
+  </section>
+  <section id="dishes">
+    <div class="container">
+        <h2 class="heading">Фірмові страви</h2>
+            <div class="row">
+                <div class="dishes-item column-3" data-descr="Ч А Ч А">
+                    <a target="_blank" href="#" ><img src="./Images/Cha.jpg" alt="чача" class="img-fluid" ></a>
+                </div>
+                <div class="dishes-item column-3" data-descr="Ч К М Е Р У Л І">
+                    <a target="_blank" href="#" ><img src="./Images/Chkmeruli.jpg" alt="чкмерулі" class="img-fluid" ></a>
+                </div>
+                <div class="dishes-item column-3" data-descr="Х І Н К А Л І">
+                    <a target="_blank" href="#"><img src="./Images/Hinkali.jpg" alt="хінкалі" class="img-fluid"></a>
+                </div>
+                <div class="dishes-item column-3" data-descr="Л А В А Ш">
+                    <a target="_blank" href="#"><img src="./Images/Lavash.jpg" alt="лаваш" class="img-fluid"></a>
+                </div>
+                <div class="dishes-item column-3" data-descr="П Е Н О В А Н І">
+                    <a target="_blank" href="#" ><img src="./Images/Penovani.jpg" alt="пеновані" class="img-fluid"></a>
+                </div>
+                <div class="dishes-item column-3" data-descr="Т А В А Д У Р І">
+                    <a target="_blank" href="#" ><img src="./Images/Tavaduri.jpg" alt="тавадурі" class="img-fluid"></a>
+                </div>
+            </div>
+            <p class="text-center">
+            <a class="btn" target="_blank" href="./Images/MENU.pdf">Переглянути  все  меню</a>
+            </p>
+        </div>
+  </section>
+  <section id="contacts">
+    <div class="container">
+        <h2 class="heading">Зробити замовлення</h2>
+        <form name="contactForm">
+            <div class="row">
+                <div class="column-2">
+                    <p><label for="username">Ім'я</label>
+                    <input type="text" id="username" name="username"> </p>
+                    <p><label for="useremail">Електронна адреса</label>
+                    <input type="email" id="useremail" name="useremail"></p>
+                    <p><label for="subject">Контактний телефон</label>
+                    <input type="text" id="usermessage" name="subject"></p>
+                </div>
+                <div class="column-2">
+                    <p><label for="usermessage">Замовлення</label>
+                    <textarea class="u-full-width" id="usermessage" name="usermessage"></textarea></p>
+                    <p><input class="btn" type="submit" value="Замовити"></p>
+                </div>
+            </div>
+        </form>
+    </div>
+  </section>
+  </body>
+</html>

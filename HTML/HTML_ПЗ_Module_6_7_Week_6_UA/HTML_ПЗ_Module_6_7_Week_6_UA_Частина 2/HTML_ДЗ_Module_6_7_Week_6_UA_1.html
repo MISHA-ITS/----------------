@@ -3,9 +3,69 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAME</title>
+    <title>Завдання 1</title>
   </head>
+  <style>
+    .ParentContainer{
+      padding: 20px;
+      max-width: max-content;
+      width: 100vw;
+      margin: auto;
+      background-color: darkslategrey;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+    }
+    .Container{
+      display: flex;
+      flex-direction: column;
+    }
+    header{
+      font-size: 10px;
+      font-weight: lighter;
+    }
+    footer{
+      flex-basis: 20vh;
+      display: flex;
+    }
+    .item{
+      height: 100px;
+      width: 100px;
+      padding: 10px;
+      justify-content: center;
+      font-size: 10px;
+    }
+    h5{
+      font-weight: lighter;
+    }
+  </style>
   <body>
-
+    <div class="ParentContainer">
+      <div class="Container">
+          <header>Home/Articles/</header>
+          <main><h1>The Difference Beetween <br> Responcive and <br> Adaptive Design</h1></main>
+          <footer>
+            <div class="item item-1">
+              <img src="./images/account.png" alt="account" height="50px" width="50px">
+            </div>
+            <div class="item item-2">
+              <h5>Author</h5>
+              <p>Geoff Graham</p>
+            </div>
+            <div class="item item-3">
+              <h5>49 Comments</h5>
+              <p>Go to comments</p>
+            </div>
+            <div class="item item-4">
+              <h5>Published</h5>
+              <p>Nov 11, 2018</p>
+            </div>
+            <div class="item item-5">
+              <h5>Updated</h5>
+              <p>Nov 17, 2018</p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
