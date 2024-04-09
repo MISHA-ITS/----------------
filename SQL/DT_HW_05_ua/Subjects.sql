@@ -1,0 +1,10 @@
+insert into Subjects (Name) values ('Databases');
+insert into Subjects (Name) values ('Basics of game genres');
+insert into Subjects (Name) values ('Content management system');
+insert into Subjects (Name) values ('Economics of software');
+insert into Subjects (Name) values ('Fundamentals of software engineering');
+insert into Subjects (Name) values ('Javascript scripting language');
+insert into Subjects (Name) values ('Operating Systems');
+insert into Subjects (Name) values ('Project workshop');
+insert into Subjects (Name) values ('Web design');
+insert into Subjects (Name) values ('Web programming');
